@@ -1,0 +1,21 @@
+* {
+	font-family: 'Open Sans', sans-serif;
+}
+
+a img {
+	max-width: 100px;
+}
+
+#landing {
+	background-image: url(images/DSC03202.jpg);
+	width: 100%;
+	height: 100vh;
+	background-size: cover;
+	background-position: left;
+}
+
+nav ul li a{
+	font-size: 18px;
+	color: white;
+	text-decoration: none;
+}
