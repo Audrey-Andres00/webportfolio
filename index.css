@@ -1,5 +1,6 @@
 * {
 	font-family: 'Open Sans', sans-serif;
+	color: white;
 }
 
 a img {
@@ -14,8 +15,260 @@ a img {
 	background-position: left;
 }
 
+#landing .navbar {
+	margin-top: 0;
+}
+
+#landing .container button span {
+	color: white;
+}
+
 nav ul li a{
-	font-size: 18px;
+	font-size: 16px;
 	color: white;
 	text-decoration: none;
+	margin-left: 10px;
+	margin-right: 10px;
+	position: relative;
+}
+
+.navbar .navbar-nav .nav-link {
+  color: inherit;
+}
+
+nav ul li a::after {
+	content: '';
+	width: 0;
+	height: 2px;
+	background: white;
+	position: absolute;
+	left: 0;
+	bottom: 3.5px;
+	transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+	width: 100%;
+
+}
+
+@media (max-width: 768px) { #landing {
+	background-image: url(images/wavey-fingerprint.svg);
+	}
+}
+
+#intro {
+	margin-top: 20%;
+	font-weight: 600;
+	margin-left: 10%;
+}
+
+#intro p {
+	font-size: 1.10rem;
+}
+
+#intro h1 {
+	font-size: 4rem;
+	font-weight: 700;
+	margin-top: -15px;
+}
+
+.scroll-icon-container {
+	color: white;
+	position: absolute;
+	bottom: 40px;
+	width: 200px;
+	margin: auto;
+	display: block;
+	left: 0;
+	right: 0;
+	align-items: center;
+}
+
+@keyframes up-down {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.scroll-icon-container i {
+	margin-top: 25px;
+	font-size: 24px;
+	animation-name: up-down;
+	animation-duration: 2.25s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+}
+
+#about {
+	background: #ff5f50;
+}
+
+#about .row h2 {
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+#about .container .timeline {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+}
+
+.timeline {
+  width: 80%;
+  height: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline ul {
+  list-style: none;
+}
+
+.timeline ul li {
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background: white;
+}
+
+.timeline ul li:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-content h1 {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  margin-bottom: 10px;
+  color: #ff5f50;
+}
+
+.timeline-content p {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 300;
+  color: #ff5f50;
+}
+
+.timeline-content .date {
+  font-size: 12px;
+  font-weight: 300;
+  margin-bottom: 5px;
+  letter-spacing: 2px;
+}
+
+@media only screen and (min-width: 768px) {
+  .timeline:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background-color: white;
+  }
+  .timeline ul li {
+    width: 50%;
+    position: relative;
+    margin-bottom: 50px;
+  }
+  .timeline ul li:nth-child(odd) {
+    float: left;
+    clear: right;
+    transform: translateX(-30px);
+    border-radius: 20px 0px 20px 20px;
+  }
+  .timeline ul li:nth-child(even) {
+    float: right;
+    clear: left;
+    transform: translateX(30px);
+    border-radius: 0px 20px 20px 20px;
+  }
+  .timeline ul li::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: white;
+    top: 0px;
+  }
+  .timeline ul li:nth-child(odd)::before {
+    transform: translate(50%, -50%);
+    right: -30px;
+  }
+  .timeline ul li:nth-child(even)::before {
+    transform: translate(-50%, -50%);
+    left: -30px;
+  }
+  .timeline-content .date {
+    position: absolute;
+    top: -30px;
+  }
+  .timeline ul li:hover::before {
+    background-color: #ff7f73;
+  }
+}
+
+#projects {
+	background: #000000;
+}
+
+#projects .row h2 {
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.carousel-inner {
+	/*width: 1000px;
+	height: 500px;*/
+	margin-bottom: 60px;
+}
+
+.carousel-item img {
+	object-fit: cover;
+}
+
+.carousel-caption {
+	margin-bottom: 30px;
+}
+
+.carousel-caption h5 {
+	font-weight: 700;
+	font-size: 32px;
+}
+
+#tools {
+	background: #ff5f50;
+}
+
+#tools .row h2 {
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+#contact h2 {
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #ff5f50;
+}
+
+#contact h3 {
+	font-weight: 700;
+	color: #ff5f50;
+}
+
+#message-form {
+	margin-top: 100px;
+	margin-bottom: 50px;
 }
